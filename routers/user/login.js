@@ -36,19 +36,19 @@ router.post("/login", async (req, res) => {
 });
 
 // 새로고침 login check
-router.get("/loginCheck", authMiddleWare, (req, res) => {
-  const { user } = res.locals;
-  // console.log('local :', locals);
-  // console.log('res : ', res);
-  console.log("loginCheck user-->", user);
-  const userId = user[0].userId;
-  const userNick = user[0].userNick;
-  console.log("userId-->", userId);
-  console.log("userNick-->", userNick);
-  res.status(200).send({
-    userId: userId,
-    userNick: userNick,
-  });
-});
+// router.get("/loginCheck", authMiddleWare, (req, res) => {
+//   const { user } = res.locals;
+//   // console.log('local :', locals);
+//   // console.log('res : ', res);
+//   console.log("loginCheck user-->", user);
+//   const userId = user[0].userId;
+//   const userNick = user[0].userNick;
+//   console.log("userId-->", userId);
+//   console.log("userNick-->", userNick);
+//   res.status(200).send({
+//     userId: userId,
+//     userNick: userNick,
+//   });
+// });
 
 module.exports = router;
