@@ -60,12 +60,9 @@ const findPwRouter = require("./routers/user/findPw");
 const changePwRouter = require("./routers/user/changePw");
 const friendListRouter = require("./routers/user/friendList");
 const naverRouter = require("./routers/user/naverLogin");
-const googleRouter = require("./routers/user/googleLogin");
 const profileRouter = require("./routers/user/profile");
 const chagneNickRouter = require("./routers/user/changeNick");
 const gameRecordRouter = require("./routers/user/gameRecord");
-// const NaverRouter = require("./routers/naverLogin/authNaver");
-// const NaverPassport = require("./routers/naverLogin/naverPassport");
 
 
 
@@ -97,7 +94,7 @@ app.use("/user", [
   gameRecordRouter
 ]);
 
-app.use("", [kakaoRouter, naverRouter, googleRouter ]);
+app.use("", [kakaoRouter, naverRouter]);
 
 app.get(
   "/.well-known/pki-validation/0404DE312D71A35DFC4CC79C62913867.txt",
