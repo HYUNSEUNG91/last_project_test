@@ -15,7 +15,7 @@ router.post("/changeNick", authMiddleware, async (req, res) => {
     var userNickReg = /^([a-zA-Z0-9ㄱ-ㅎ|ㅏ-ㅣ|가-힣]).{2,15}$/; //2~15자 한글,영문,숫자
 
     const existUsers = await User.findOne({userNick:changeNick});
-    // console.log('existUser :',existUsers)
+    console.log('existUser :',existUsers)
 
     if (changeNick == "" || changeNick == undefined || changeNick == null) {
         res.status(400).send({
