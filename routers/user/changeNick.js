@@ -12,7 +12,7 @@ router.post("/changeNick", authMiddleware, async (req, res) => {
     console.log('loginUserId :', userId, 'loginUserNick :',userNick);
 
     // Validation check
-    var userNickReg = /^([a-zA-Z0-9ㄱ-ㅎ|ㅏ-ㅣ|가-힣]).{1,15}$/; //2~15자 한글,영문,숫자
+    var userNickReg = /^([a-zA-Z0-9ㄱ-ㅎ|ㅏ-ㅣ|가-힣]).{2,15}$/; //2~15자 한글,영문,숫자
 
     const existUsers = await User.findOne({userNick:changeNick});
     // console.log('existUser :',existUsers)
