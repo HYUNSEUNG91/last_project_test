@@ -19,7 +19,7 @@ module.exports = (req, res, next) => {
   }
   try {
     const { userId } = jwt.verify(tokenValue, `${process.env.KEY}`);
-    console.log("userId-->", userId);
+    console.log("auth userId-->", userId);
     //error발생 StringToObjectID
     User.find({ userId })
       .exec()
