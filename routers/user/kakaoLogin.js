@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 
 const kakao = {
   clientid: `${process.env.CLIENTID}`, //REST API
-  redirectUri: "https://www.mafiyang.com/",
+  redirectUri: "https://www.mafiyang.com/main",
 };
 // kakao login page URL
 router.get("/kakaoLogin", (req, res) => {

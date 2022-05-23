@@ -6,7 +6,7 @@ module.exports = (req, res, next) => {
   console.log("authMiddleware");
   //헤더의 이름 authorization 은 프론트와 얘기해야 함.
   const { authorization } = req.headers;
-  console.log('auth req :', req);
+  // console.log('auth req :', req);
   // console.log("1,autu", authorization)
   const [tokenType, tokenValue] = authorization.split(" ");
   // console.log(tokenType);
