@@ -8,7 +8,7 @@ const { request } = require("http");
 
 const naver = {
     clientid: `${process.env.CLIENT_ID}`, //REST API
-    redirectUri: "https://d191gfhy5yq8br.cloudfront.net/main",
+    redirectUri: "https://www.mafiyang.com/",
     client_secret: `${process.env.CLIENT_SECRET}`,
     state: 'login'
   };
