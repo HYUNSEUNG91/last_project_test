@@ -97,11 +97,11 @@ app.use("/user", [
 app.use("", [kakaoRouter, naverRouter]);
 
 app.get(
-  "/.well-known/pki-validation/0404DE312D71A35DFC4CC79C62913867.txt",
+  "/.well-known/pki-validation/AE81C756634A4194B40FDF51877206E8.txt",
   (req, res) => {
     res.sendFile(
       __dirname +
-        "/.well-known/pki-validation/0404DE312D71A35DFC4CC79C62913867.txt"
+        "/.well-known/pki-validation/AE81C756634A4194B40FDF51877206E8.txt"
     );
   }
 );
@@ -114,7 +114,7 @@ app.get(
 
 const httpServer = http.createServer(app_low);
 const httpsServer = https.createServer(credentials, app);
-SocketIO(httpsServer);
+SocketIO(httpServer);
 
 // 서버 열기
 httpServer.listen(httpPort, () => {

@@ -75,8 +75,8 @@ router.get('/naverLogin/callback', async (req, res) => {
     console.log("token-->", token);
     res.status(200).send({
       token,
-      naverId,
-      naverNick,
+      userId : naverId,
+      userNick : naverNick,
 
     });
   
